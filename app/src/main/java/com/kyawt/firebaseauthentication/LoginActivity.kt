@@ -38,6 +38,14 @@ class LoginActivity : AppCompatActivity() {
         email = loginEmail.text.toString()
         password = loginPassword.text.toString()
 
+
+        //.............
+        btnForgot.setOnClickListener { // Onclick funtion for forget password btn
+            var intent= Intent(this,ForgetPasswordActivity::class.java)
+            startActivity(intent)
+        }
+        //.........
+
         mProgress!!.setMessage("Login User....")
         mProgress!!.show()
 
